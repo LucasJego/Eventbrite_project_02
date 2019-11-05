@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Application pour gérer des événements.
 
-* Ruby version
+Pour lancer l'application en local :
 
-* System dependencies
+1. bundle install
+2. rails db:drop
+3. rails db:create
+4. rails db:migrate
+5. rails db:seed
+6. rails server
 
-* Configuration
+L'URL de la page d'accueil de l'appli est la suivante : http://localhost:3000
 
-* Database creation
 
-* Database initialization
+Sinon :
 
-* How to run the test suite
+URL de l'application sur le web : https://eventbrite-project-02.herokuapp.com/
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

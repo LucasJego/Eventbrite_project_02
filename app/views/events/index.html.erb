@@ -6,5 +6,8 @@
 <p>Durée de l'événement : <%= event.duration %> min</p>
 <p>Prix : <%= event.price %></p>
 <p>Organisateur de l'événement : <%= event.administrator.first_name %> <%= event.administrator.last_name %></p>
+<p></p>
+<span class="badge badge-pill badge-primary"><a href="<%= event_path(event.id) %>">Voir l'événement </a></span></br>
 <br/><br/>
 <% end %>
+
