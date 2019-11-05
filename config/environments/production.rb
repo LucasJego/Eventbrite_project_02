@@ -91,4 +91,10 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Ligne rajoutée pour utiliser le mailer
+  # Cette ligne sert à dire à Heroku que l'URL de mon app
+  # est 'EVENTBRITE-PROJECT-02' -> pour le lien pour le
+  # formulaire de changement de mot de passe
+  config.action_mailer.default_url_options = { :hots => 'EVENTBRITE-PROJECT-02.herokuapp.com'}
 end

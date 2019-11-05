@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+#require 'faker'
 
 puts 'Suppression des événements'
 Event.destroy_all
@@ -31,7 +31,7 @@ puts "\n10 utilisateurs ont été créés."
 
 puts "\n\nCréation des événements"
 10.times do 
-	event = Event.new(start_date: Faker::Date.forward(days: 30), duration: 45, title: Faker::Book.title, description: Faker::Lorem.sentence(word_count: 40), price: rand(1..1000), location: Faker::Address.city)
+	event = Event.new(start_date: Faker::Date.forward(days: 30), duration: 45, title: Faker::Book.title, description: Faker::Lorem.sentence(word_count: 40), price: rand(1..1000), location: Faker::Address.city, administrator: users_array.sample)
 	event.save
 	events_array << event
 	puts "L'événement #{event.title} a été créé."
@@ -43,7 +43,7 @@ puts "\n10 événements ont été créés."
 # Les participations sont créées en dernier car on a besoin d'un événement et d'un utilisateur pour les créer.
 puts "\n\nCréation des participations"
 5.times do
-	attendance = Attendance.new(administrator: users_array.sample, event: events_array.sample)
+	attendance = Attendance.new(administrator: users_array.sample, attendant: users_array.sample, event: events_array.sample)
 	attendance.save
 	puts "La participation à l'événement #{attendance.event.title} a été créée."
 end
