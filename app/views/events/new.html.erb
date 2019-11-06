@@ -6,8 +6,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
 
-<h1>Création d'un nouvel événement</h1>
-
 <div class="contener text-center" style="margin: 10px">
   <% if flash[:fail_password] %> 
     <div class="alert alert-danger" role="alert">
@@ -39,22 +37,31 @@
 			<div class="input-group-prepend">
 			    <span class="input-group-text"> <i class="fas fa-table"></i> </span>
 			 </div>
-	        <input name="first_name" class="form-control" placeholder="Date de l'événement" type="text">
+	        <input name="start_date" class="form-control" placeholder="Date de l'événement" type="text">
 	    </div> 
 	    <div class="form-group input-group">
 			<div class="input-group-prepend">
 			    <span class="input-group-text"> <i class="fas fa-hourglass-start"></i> </span>
 			 </div>
-	        <input name="last_name" class="form-control" placeholder="Durée" type="text">
+	        <input name="duration" class="form-control" placeholder="Durée" type="text">
 	    </div>
+
 	    <div class="form-group input-group">
 			<div class="input-group-prepend">
-			    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+			    <span class="input-group-text"> <i class="fas fa-heading"></i> </span>
 			 </div>
-	        <input name="age" class="form-control" placeholder="Titre" type="text">
+	        <input name="title" class="form-control" placeholder="Titre" type="text">
 	    </div>
 	    <div class="form-group input-group">
 			<input name="description" class="form-control" placeholder="Décrivez l'événement" type="text">
+	    </div>
+
+	    <!-- form-group// -->
+	    <div class="form-group input-group">
+	    	<div class="input-group-prepend">
+			    <span class="input-group-text"> <i class="fas fa-money-bill-alt"></i> </span>
+			</div>
+			<input name="price" class="form-control" placeholder="Prix" type="number">
 	    </div>
 	    
 	    <!-- form-group// -->
@@ -62,8 +69,12 @@
 	    	<div class="input-group-prepend">
 			    <span class="input-group-text"> <i class="fas fa-location-arrow"></i> </span>
 			</div>
+			<input name="location" class="form-control" placeholder="Lieu" type="text">
+	    </div>
+			<!--
 			<select name="city" class="form-control">
-				<option selected=""> Sélectionner un lieu</option>
+				<option selected="Montpellier, Ouagadougou"> Sélectionner un lieu</option>
+			-->
 				
 			</select>
 		</div> <!-- form-group end.// -->
